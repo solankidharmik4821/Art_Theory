@@ -1,597 +1,936 @@
 <!doctype html>
 <html lang="en" class="h-full">
- <head>
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Art Theory - Handmade Art, Custom Artworks, Creative Crafts, Personalized Gifts, Art Showcase">
-  <meta name="keywords" content="Handmade Art, Custom Artworks, Creative Crafts, Personalized Gifts, Art Showcase, Art Theory">
+  <meta name="description"
+    content="Art Theory - Handmade Art, Custom Artworks, Creative Crafts, Personalized Gifts, Art Showcase">
+  <meta name="keywords"
+    content="Handmade Art, Custom Artworks, Creative Crafts, Personalized Gifts, Art Showcase, Art Theory">
   <title>Art Theory - Where Creativity Meets Expression</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="/_sdk/element_sdk.js"></script>
   <script src="/_sdk/data_sdk.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Quicksand:wght@300;400;500;600;700&amp;family=Dancing+Script:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Quicksand:wght@300;400;500;600;700&amp;family=Dancing+Script:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="index.css">
-  <style>@view-transition { navigation: auto; }</style>
- </head>
- <body class="h-full font-body" style="background-color: var(--color-cream); color: var(--color-charcoal);">
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+  </style>
+</head>
+
+<body class="h-full font-body" style="background-color: var(--color-cream); color: var(--color-charcoal);">
   <div id="app-wrapper" class="h-full w-full overflow-auto"><!-- Navigation -->
-   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background-color: rgba(250, 247, 242, 0.95); backdrop-filter: blur(10px);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="flex justify-between items-center py-4"><!-- Logo --> <a href="#home" class="flex items-center space-x-2">
-       <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, var(--color-warm-brown), var(--color-terracotta));">
-        <svg class="w-7 h-7 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-        </svg>
-       </div><span id="nav-brand" class="font-display text-2xl font-semibold" style="color: var(--color-warm-brown);">Art Theory</span> </a> <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center space-x-8"><a href="#home" class="nav-link font-medium text-sm tracking-wide active" style="color: var(--color-charcoal);">Home</a> <a href="#about" class="nav-link font-medium text-sm tracking-wide" style="color: var(--color-charcoal);">About Us</a> <a href="#gallery" class="nav-link font-medium text-sm tracking-wide" style="color: var(--color-charcoal);">Gallery</a> <a href="#services" class="nav-link font-medium text-sm tracking-wide" style="color: var(--color-charcoal);">Services</a> <a href="#contact" class="nav-link font-medium text-sm tracking-wide" style="color: var(--color-charcoal);">Contact</a>
-      </div><!-- Mobile Menu Button --> <button id="mobile-menu-btn" class="md:hidden p-2" onclick="toggleMobileMenu()">
-       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-       </svg></button>
-     </div>
-    </div><!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 shadow-2xl md:hidden" style="background-color: var(--color-cream);">
-     <div class="p-6"><button onclick="toggleMobileMenu()" class="absolute top-4 right-4 p-2">
-       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-       </svg></button>
-      <div class="mt-12 space-y-6"><a href="#home" class="block font-medium text-lg" onclick="toggleMobileMenu()" style="color: var(--color-charcoal);">Home</a> <a href="#about" class="block font-medium text-lg" onclick="toggleMobileMenu()" style="color: var(--color-charcoal);">About Us</a> <a href="#gallery" class="block font-medium text-lg" onclick="toggleMobileMenu()" style="color: var(--color-charcoal);">Gallery</a> <a href="#services" class="block font-medium text-lg" onclick="toggleMobileMenu()" style="color: var(--color-charcoal);">Services</a> <a href="#contact" class="block font-medium text-lg" onclick="toggleMobileMenu()" style="color: var(--color-charcoal);">Contact</a>
-      </div>
-     </div>
-    </div>
-   </nav><!-- Hero Section -->
-   <section id="home" class="min-h-screen flex items-center hero-pattern pt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-     <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="space-y-8">
-       <div class="opacity-0 animate-fade-in-up"><span class="font-script text-2xl" style="color: var(--color-terracotta);">Welcome to</span>
-        <h1 id="hero-title" class="font-display text-5xl md:text-7xl font-bold mt-2" style="color: var(--color-charcoal);">Art Theory</h1>
-       </div>
-       <p id="hero-tagline" class="font-script text-3xl md:text-4xl opacity-0 animate-fade-in-up delay-200" style="color: var(--color-warm-brown);">Where Creativity Meets Expression</p>
-       <p class="text-lg leading-relaxed opacity-0 animate-fade-in-up delay-300" style="color: var(--color-charcoal); opacity: 0.8;">Discover handcrafted artworks that tell stories, evoke emotions, and transform spaces. Each piece is a unique expression of creativity, crafted with passion and attention to detail.</p>
-       <div class="flex flex-wrap gap-4 opacity-0 animate-fade-in-up delay-400"><a href="#gallery" class="btn-primary px-8 py-4 rounded-full text-white font-medium tracking-wide"> View Gallery </a> <a href="#contact" class="btn-secondary px-8 py-4 rounded-full font-medium tracking-wide" style="color: var(--color-warm-brown);"> Contact Us </a>
-       </div>
-      </div>
-      <div class="relative opacity-0 animate-slide-right delay-300">
-       <div class="relative"><!-- Decorative Elements -->
-        <div class="absolute -top-8 -left-8 w-32 h-32 rounded-full animate-float" style="background: linear-gradient(135deg, var(--color-sage) 0%, transparent 70%); opacity: 0.5;"></div>
-        <div class="absolute -bottom-8 -right-8 w-48 h-48 rounded-full animate-float delay-500" style="background: linear-gradient(135deg, var(--color-terracotta) 0%, transparent 70%); opacity: 0.4;"></div><!-- Hero Image Grid -->
-        <div class="grid grid-cols-2 gap-4">
-         <div class="space-y-4">
-          <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300" style="background: linear-gradient(135deg, #E8DDD4 0%, #D4C4B5 100%); aspect-ratio: 3/4;">
-           <div class="w-full h-full flex items-center justify-center p-6">
-            <svg class="w-24 h-24" style="color: var(--color-warm-brown);" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1"><circle cx="50" cy="35" r="20" /> <path d="M20 90 Q30 60 50 70 Q70 80 80 90" /> <path d="M35 55 L45 75 M65 55 L55 75" />
-            </svg>
-           </div>
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style="background-color: rgba(250, 247, 242, 0.95); backdrop-filter: blur(10px);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4"><!-- Logo --> <a href="#home"
+            class="flex items-center space-x-2">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center"
+              style="background: linear-gradient(135deg, var(--color-warm-brown), var(--color-terracotta));">
+              <svg class="w-7 h-7 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+            </div><span id="nav-brand" class="font-display text-2xl font-semibold"
+              style="color: var(--color-warm-brown);">Art Theory</span>
+          </a> <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8"><a href="#home"
+              class="nav-link font-medium text-sm tracking-wide active" style="color: var(--color-charcoal);">Home</a>
+            <a href="#about" class="nav-link font-medium text-sm tracking-wide"
+              style="color: var(--color-charcoal);">About Us</a> <a href="#gallery"
+              class="nav-link font-medium text-sm tracking-wide" style="color: var(--color-charcoal);">Gallery</a> <a
+              href="#services" class="nav-link font-medium text-sm tracking-wide"
+              style="color: var(--color-charcoal);">Services</a> <a href="#contact"
+              class="nav-link font-medium text-sm tracking-wide" style="color: var(--color-charcoal);">Contact</a>
+          </div><!-- Mobile Menu Button --> <button id="mobile-menu-btn" class="md:hidden p-2"
+            onclick="toggleMobileMenu()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg></button>
+        </div>
+      </div><!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 shadow-2xl md:hidden"
+        style="background-color: var(--color-cream);">
+        <div class="p-6"><button onclick="toggleMobileMenu()" class="absolute top-4 right-4 p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg></button>
+          <div class="mt-12 space-y-6"><a href="#home" class="block font-medium text-lg" onclick="toggleMobileMenu()"
+              style="color: var(--color-charcoal);">Home</a> <a href="#about" class="block font-medium text-lg"
+              onclick="toggleMobileMenu()" style="color: var(--color-charcoal);">About Us</a> <a href="#gallery"
+              class="block font-medium text-lg" onclick="toggleMobileMenu()"
+              style="color: var(--color-charcoal);">Gallery</a> <a href="#services" class="block font-medium text-lg"
+              onclick="toggleMobileMenu()" style="color: var(--color-charcoal);">Services</a> <a href="#contact"
+              class="block font-medium text-lg" onclick="toggleMobileMenu()"
+              style="color: var(--color-charcoal);">Contact</a>
           </div>
-          <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300" style="background: linear-gradient(135deg, #D4E4D1 0%, #B8D4B4 100%); aspect-ratio: 4/3;">
-           <div class="w-full h-full flex items-center justify-center p-4">
-            <svg class="w-20 h-20" style="color: var(--color-sage);" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M50 10 L50 90 M30 30 Q50 50 70 30 M25 50 Q50 70 75 50 M30 70 Q50 85 70 70" />
-            </svg>
-           </div>
+        </div>
+      </div>
+    </nav><!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center hero-pattern pt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <div class="opacity-0 animate-fade-in-up"><span class="font-script text-2xl"
+                style="color: var(--color-terracotta);">Welcome to</span>
+              <h1 id="hero-title" class="font-display text-5xl md:text-7xl font-bold mt-2"
+                style="color: var(--color-charcoal);">Art Theory</h1>
+            </div>
+            <p id="hero-tagline" class="font-script text-3xl md:text-4xl opacity-0 animate-fade-in-up delay-200"
+              style="color: var(--color-warm-brown);">Where Creativity Meets Expression</p>
+            <p class="text-lg leading-relaxed opacity-0 animate-fade-in-up delay-300"
+              style="color: var(--color-charcoal); opacity: 0.8;">Discover handcrafted artworks that tell stories, evoke
+              emotions, and transform spaces. Each piece is a unique expression of creativity, crafted with passion and
+              attention to detail.</p>
+            <div class="flex flex-wrap gap-4 opacity-0 animate-fade-in-up delay-400"><a href="#gallery"
+                class="btn-primary px-8 py-4 rounded-full text-white font-medium tracking-wide"> View Gallery </a> <a
+                href="#contact" class="btn-secondary px-8 py-4 rounded-full font-medium tracking-wide"
+                style="color: var(--color-warm-brown);"> Contact Us </a>
+            </div>
           </div>
-         </div>
-         <div class="space-y-4 mt-8">
-          <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300" style="background: linear-gradient(135deg, #F5E6D3 0%, #E8D4C0 100%); aspect-ratio: 4/3;">
-           <div class="w-full h-full flex items-center justify-center p-4">
-            <svg class="w-20 h-20" style="color: var(--color-terracotta);" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="15" y="15" width="70" height="70" rx="5" /> <circle cx="35" cy="40" r="10" /> <path d="M20 75 L40 55 L55 65 L80 40" />
-            </svg>
-           </div>
+          <div class="relative opacity-0 animate-slide-right delay-300">
+            <div class="relative"><!-- Decorative Elements -->
+              <div class="absolute -top-8 -left-8 w-32 h-32 rounded-full animate-float"
+                style="background: linear-gradient(135deg, var(--color-sage) 0%, transparent 70%); opacity: 0.5;"></div>
+              <div class="absolute -bottom-8 -right-8 w-48 h-48 rounded-full animate-float delay-500"
+                style="background: linear-gradient(135deg, var(--color-terracotta) 0%, transparent 70%); opacity: 0.4;">
+              </div><!-- Hero Image Grid -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                  <div
+                    class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
+                    style="background: linear-gradient(135deg, #E8DDD4 0%, #D4C4B5 100%); aspect-ratio: 3/4;">
+                    <div class="w-full h-full flex items-center justify-center p-6">
+                      <svg class="w-24 h-24" style="color: var(--color-warm-brown);" viewbox="0 0 100 100" fill="none"
+                        stroke="currentColor" stroke-width="1">
+                        <circle cx="50" cy="35" r="20" />
+                        <path d="M20 90 Q30 60 50 70 Q70 80 80 90" />
+                        <path d="M35 55 L45 75 M65 55 L55 75" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
+                    style="background: linear-gradient(135deg, #D4E4D1 0%, #B8D4B4 100%); aspect-ratio: 4/3;">
+                    <div class="w-full h-full flex items-center justify-center p-4">
+                      <svg class="w-20 h-20" style="color: var(--color-sage);" viewbox="0 0 100 100" fill="none"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path d="M50 10 L50 90 M30 30 Q50 50 70 30 M25 50 Q50 70 75 50 M30 70 Q50 85 70 70" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="space-y-4 mt-8">
+                  <div
+                    class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
+                    style="background: linear-gradient(135deg, #F5E6D3 0%, #E8D4C0 100%); aspect-ratio: 4/3;">
+                    <div class="w-full h-full flex items-center justify-center p-4">
+                      <svg class="w-20 h-20" style="color: var(--color-terracotta);" viewbox="0 0 100 100" fill="none"
+                        stroke="currentColor" stroke-width="1.5">
+                        <rect x="15" y="15" width="70" height="70" rx="5" />
+                        <circle cx="35" cy="40" r="10" />
+                        <path d="M20 75 L40 55 L55 65 L80 40" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div
+                    class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300"
+                    style="background: linear-gradient(135deg, #E4DDD4 0%, #C9BFB4 100%); aspect-ratio: 3/4;">
+                    <div class="w-full h-full flex items-center justify-center p-6">
+                      <svg class="w-24 h-24" style="color: var(--color-warm-brown);" viewbox="0 0 100 100" fill="none"
+                        stroke="currentColor" stroke-width="1">
+                        <ellipse cx="50" cy="70" rx="30" ry="15" />
+                        <path d="M30 70 Q30 30 50 20 Q70 30 70 70" />
+                        <path d="M50 20 Q55 10 65 15" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="rounded-2xl overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300" style="background: linear-gradient(135deg, #E4DDD4 0%, #C9BFB4 100%); aspect-ratio: 3/4;">
-           <div class="w-full h-full flex items-center justify-center p-6">
-            <svg class="w-24 h-24" style="color: var(--color-warm-brown);" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1"><ellipse cx="50" cy="70" rx="30" ry="15" /> <path d="M30 70 Q30 30 50 20 Q70 30 70 70" /> <path d="M50 20 Q55 10 65 15" />
-            </svg>
-           </div>
+        </div>
+      </div>
+    </section><!-- Featured Works Section -->
+    <section class="py-20" style="background: linear-gradient(180deg, var(--color-cream) 0%, #F5F0E8 100%);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16"><span class="font-script text-xl" style="color: var(--color-terracotta);">Our
+            Collection</span>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mt-2" style="color: var(--color-charcoal);">Featured
+            Artworks</h2>
+          <div class="w-24 h-1 mx-auto mt-6 rounded-full"
+            style="background: linear-gradient(90deg, var(--color-warm-brown), var(--color-terracotta));"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8"><!-- Featured Item 1 -->
+          <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+            style="background-color: white;">
+            <div class="relative aspect-square" style="background: linear-gradient(135deg, #F8E8D6 0%, #E8D6C6 100%);">
+              <div class="w-full h-full flex items-center justify-center">
+                <svg class="w-32 h-32" style="color: var(--color-warm-brown);" viewbox="0 0 120 120" fill="none"
+                  stroke="currentColor" stroke-width="1">
+                  <circle cx="60" cy="50" r="25" />
+                  <path d="M35 50 Q35 90 60 95 Q85 90 85 50" />
+                  <path d="M45 45 L50 50 M70 45 L75 50" />
+                  <path d="M50 60 Q60 70 70 60" />
+                </svg>
+              </div>
+              <div class="gallery-overlay absolute inset-0 flex items-center justify-center opacity-0"
+                style="background: rgba(44, 44, 44, 0.7);"><span class="text-white font-medium">View Details</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-semibold" style="color: var(--color-charcoal);">Abstract Expression
+              </h3>
+              <p class="text-sm mt-2" style="color: var(--color-warm-brown);">Handcrafted Sculpture</p>
+            </div>
+          </div><!-- Featured Item 2 -->
+          <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+            style="background-color: white;">
+            <div class="relative aspect-square" style="background: linear-gradient(135deg, #E6F0E4 0%, #D4E4D0 100%);">
+              <div class="w-full h-full flex items-center justify-center">
+                <svg class="w-32 h-32" style="color: var(--color-sage);" viewbox="0 0 120 120" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <rect x="20" y="20" width="80" height="80" rx="8" />
+                  <path d="M30 85 L50 50 L70 70 L90 35" />
+                  <circle cx="40" cy="45" r="8" />
+                </svg>
+              </div>
+              <div class="gallery-overlay absolute inset-0 flex items-center justify-center opacity-0"
+                style="background: rgba(44, 44, 44, 0.7);"><span class="text-white font-medium">View Details</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-semibold" style="color: var(--color-charcoal);">Nature's Canvas</h3>
+              <p class="text-sm mt-2" style="color: var(--color-warm-brown);">Oil Painting</p>
+            </div>
+          </div><!-- Featured Item 3 -->
+          <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+            style="background-color: white;">
+            <div class="relative aspect-square" style="background: linear-gradient(135deg, #F0E6E0 0%, #E0D4CC 100%);">
+              <div class="w-full h-full flex items-center justify-center">
+                <svg class="w-32 h-32" style="color: var(--color-terracotta);" viewbox="0 0 120 120" fill="none"
+                  stroke="currentColor" stroke-width="1">
+                  <path d="M60 20 C30 20 20 50 20 70 C20 95 40 100 60 100 C80 100 100 95 100 70 C100 50 90 20 60 20" />
+                  <path d="M40 60 Q60 80 80 60" />
+                  <circle cx="45" cy="50" r="5" fill="currentColor" />
+                  <circle cx="75" cy="50" r="5" fill="currentColor" />
+                </svg>
+              </div>
+              <div class="gallery-overlay absolute inset-0 flex items-center justify-center opacity-0"
+                style="background: rgba(44, 44, 44, 0.7);"><span class="text-white font-medium">View Details</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display text-xl font-semibold" style="color: var(--color-charcoal);">Ceramic Dreams</h3>
+              <p class="text-sm mt-2" style="color: var(--color-warm-brown);">Handmade Pottery</p>
+            </div>
           </div>
-         </div>
         </div>
-       </div>
+        <div class="text-center mt-12"><a href="#gallery"
+            class="btn-secondary px-8 py-4 rounded-full font-medium tracking-wide inline-block"
+            style="color: var(--color-warm-brown);"> Explore Full Gallery → </a>
+        </div>
       </div>
-     </div>
-    </div>
-   </section><!-- Featured Works Section -->
-   <section class="py-20" style="background: linear-gradient(180deg, var(--color-cream) 0%, #F5F0E8 100%);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-16"><span class="font-script text-xl" style="color: var(--color-terracotta);">Our Collection</span>
-      <h2 class="font-display text-4xl md:text-5xl font-bold mt-2" style="color: var(--color-charcoal);">Featured Artworks</h2>
-      <div class="w-24 h-1 mx-auto mt-6 rounded-full" style="background: linear-gradient(90deg, var(--color-warm-brown), var(--color-terracotta));"></div>
-     </div>
-     <div class="grid md:grid-cols-3 gap-8"><!-- Featured Item 1 -->
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="background-color: white;">
-       <div class="relative aspect-square" style="background: linear-gradient(135deg, #F8E8D6 0%, #E8D6C6 100%);">
-        <div class="w-full h-full flex items-center justify-center">
-         <svg class="w-32 h-32" style="color: var(--color-warm-brown);" viewbox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1"><circle cx="60" cy="50" r="25" /> <path d="M35 50 Q35 90 60 95 Q85 90 85 50" /> <path d="M45 45 L50 50 M70 45 L75 50" /> <path d="M50 60 Q60 70 70 60" />
-         </svg>
+    </section><!-- About Section -->
+    <section id="about" class="py-20" style="background-color: var(--color-cream);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="relative">
+            <div class="absolute -top-4 -left-4 w-full h-full rounded-2xl"
+              style="background-color: var(--color-terracotta); opacity: 0.2;"></div>
+            <div class="relative rounded-2xl overflow-hidden"
+              style="background: linear-gradient(135deg, #E8DDD4 0%, #D4C4B5 100%); aspect-ratio: 4/5;">
+              <div class="w-full h-full flex items-center justify-center p-12">
+                <svg class="w-full h-full max-w-xs" style="color: var(--color-warm-brown);" viewbox="0 0 200 250"
+                  fill="none" stroke="currentColor" stroke-width="1"><!-- Artist at easel -->
+                  <circle cx="100" cy="50" r="25" />
+                  <path d="M75 75 L65 150 M125 75 L135 150" />
+                  <path d="M65 150 L100 160 L135 150" />
+                  <rect x="140" y="60" width="50" height="60" rx="3" />
+                  <path d="M150 80 L180 80 M150 100 L170 100" />
+                  <path d="M100 100 L155 80" /> <!-- Palette -->
+                  <ellipse cx="55" cy="120" rx="25" ry="15" transform="rotate(-20 55 120)" />
+                  <circle cx="45" cy="115" r="4" fill="currentColor" />
+                  <circle cx="55" cy="110" r="4" fill="currentColor" />
+                  <circle cx="65" cy="115" r="4" fill="currentColor" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-8">
+            <div><span class="font-script text-xl" style="color: var(--color-terracotta);">Our Story</span>
+              <h2 class="font-display text-4xl md:text-5xl font-bold mt-2" style="color: var(--color-charcoal);">About
+                Art Theory</h2>
+              <div class="w-24 h-1 mt-6 rounded-full"
+                style="background: linear-gradient(90deg, var(--color-warm-brown), var(--color-terracotta));"></div>
+            </div>
+            <p class="text-lg leading-relaxed" style="color: var(--color-charcoal); opacity: 0.85;">Founded with a
+              passion for authentic craftsmanship, Art Theory began as a small studio where creativity knows no bounds.
+              We believe that art should be accessible, meaningful, and deeply personal.</p>
+            <p class="text-lg leading-relaxed" style="color: var(--color-charcoal); opacity: 0.85;">Every piece we
+              create tells a story – your story. From abstract paintings to intricate handmade crafts, our artists pour
+              their heart and soul into each creation, ensuring that every artwork is as unique as its owner.</p>
+            <div class="grid grid-cols-2 gap-6 pt-4">
+              <div class="text-center p-6 rounded-xl" style="background-color: rgba(196, 164, 132, 0.15);"><span
+                  class="font-display text-4xl font-bold" style="color: var(--color-warm-brown);">500+</span>
+                <p class="text-sm mt-2" style="color: var(--color-charcoal);">Artworks Created</p>
+              </div>
+              <div class="text-center p-6 rounded-xl" style="background-color: rgba(156, 175, 136, 0.15);"><span
+                  class="font-display text-4xl font-bold" style="color: var(--color-sage);">200+</span>
+                <p class="text-sm mt-2" style="color: var(--color-charcoal);">Happy Clients</p>
+              </div>
+            </div>
+            <div class="pt-4">
+              <h3 class="font-display text-xl font-semibold mb-4" style="color: var(--color-charcoal);">Our Vision</h3>
+              <p class="leading-relaxed" style="color: var(--color-charcoal); opacity: 0.85;">To inspire and transform
+                spaces through authentic, handcrafted artworks that celebrate creativity, culture, and personal
+                expression.</p>
+            </div>
+          </div>
         </div>
-        <div class="gallery-overlay absolute inset-0 flex items-center justify-center opacity-0" style="background: rgba(44, 44, 44, 0.7);"><span class="text-white font-medium">View Details</span>
-        </div>
-       </div>
-       <div class="p-6">
-        <h3 class="font-display text-xl font-semibold" style="color: var(--color-charcoal);">Abstract Expression</h3>
-        <p class="text-sm mt-2" style="color: var(--color-warm-brown);">Handcrafted Sculpture</p>
-       </div>
-      </div><!-- Featured Item 2 -->
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="background-color: white;">
-       <div class="relative aspect-square" style="background: linear-gradient(135deg, #E6F0E4 0%, #D4E4D0 100%);">
-        <div class="w-full h-full flex items-center justify-center">
-         <svg class="w-32 h-32" style="color: var(--color-sage);" viewbox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="20" y="20" width="80" height="80" rx="8" /> <path d="M30 85 L50 50 L70 70 L90 35" /> <circle cx="40" cy="45" r="8" />
-         </svg>
-        </div>
-        <div class="gallery-overlay absolute inset-0 flex items-center justify-center opacity-0" style="background: rgba(44, 44, 44, 0.7);"><span class="text-white font-medium">View Details</span>
-        </div>
-       </div>
-       <div class="p-6">
-        <h3 class="font-display text-xl font-semibold" style="color: var(--color-charcoal);">Nature's Canvas</h3>
-        <p class="text-sm mt-2" style="color: var(--color-warm-brown);">Oil Painting</p>
-       </div>
-      </div><!-- Featured Item 3 -->
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" style="background-color: white;">
-       <div class="relative aspect-square" style="background: linear-gradient(135deg, #F0E6E0 0%, #E0D4CC 100%);">
-        <div class="w-full h-full flex items-center justify-center">
-         <svg class="w-32 h-32" style="color: var(--color-terracotta);" viewbox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1"><path d="M60 20 C30 20 20 50 20 70 C20 95 40 100 60 100 C80 100 100 95 100 70 C100 50 90 20 60 20" /> <path d="M40 60 Q60 80 80 60" /> <circle cx="45" cy="50" r="5" fill="currentColor" /> <circle cx="75" cy="50" r="5" fill="currentColor" />
-         </svg>
-        </div>
-        <div class="gallery-overlay absolute inset-0 flex items-center justify-center opacity-0" style="background: rgba(44, 44, 44, 0.7);"><span class="text-white font-medium">View Details</span>
-        </div>
-       </div>
-       <div class="p-6">
-        <h3 class="font-display text-xl font-semibold" style="color: var(--color-charcoal);">Ceramic Dreams</h3>
-        <p class="text-sm mt-2" style="color: var(--color-warm-brown);">Handmade Pottery</p>
-       </div>
       </div>
-     </div>
-     <div class="text-center mt-12"><a href="#gallery" class="btn-secondary px-8 py-4 rounded-full font-medium tracking-wide inline-block" style="color: var(--color-warm-brown);"> Explore Full Gallery → </a>
-     </div>
-    </div>
-   </section><!-- About Section -->
-   <section id="about" class="py-20" style="background-color: var(--color-cream);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <div class="relative">
-       <div class="absolute -top-4 -left-4 w-full h-full rounded-2xl" style="background-color: var(--color-terracotta); opacity: 0.2;"></div>
-       <div class="relative rounded-2xl overflow-hidden" style="background: linear-gradient(135deg, #E8DDD4 0%, #D4C4B5 100%); aspect-ratio: 4/5;">
-        <div class="w-full h-full flex items-center justify-center p-12">
-         <svg class="w-full h-full max-w-xs" style="color: var(--color-warm-brown);" viewbox="0 0 200 250" fill="none" stroke="currentColor" stroke-width="1"><!-- Artist at easel --> <circle cx="100" cy="50" r="25" /> <path d="M75 75 L65 150 M125 75 L135 150" /> <path d="M65 150 L100 160 L135 150" /> <rect x="140" y="60" width="50" height="60" rx="3" /> <path d="M150 80 L180 80 M150 100 L170 100" /> <path d="M100 100 L155 80" /> <!-- Palette --> <ellipse cx="55" cy="120" rx="25" ry="15" transform="rotate(-20 55 120)" /> <circle cx="45" cy="115" r="4" fill="currentColor" /> <circle cx="55" cy="110" r="4" fill="currentColor" /> <circle cx="65" cy="115" r="4" fill="currentColor" />
-         </svg>
+    </section><!-- Gallery Section -->
+    <section id="gallery" class="py-20"
+      style="background: linear-gradient(180deg, #F5F0E8 0%, var(--color-cream) 100%);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12"><span class="font-script text-xl"
+            style="color: var(--color-terracotta);">Portfolio</span>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mt-2" style="color: var(--color-charcoal);">Our Gallery
+          </h2>
+          <div class="w-24 h-1 mx-auto mt-6 rounded-full"
+            style="background: linear-gradient(90deg, var(--color-warm-brown), var(--color-terracotta));"></div>
+        </div><!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12"><button onclick="filterGallery('all')"
+            class="filter-btn active px-6 py-2 rounded-full text-sm font-medium transition-all"
+            style="background-color: var(--color-warm-brown); color: white;" data-filter="all"> All </button> <button
+            onclick="filterGallery('paintings')"
+            class="filter-btn px-6 py-2 rounded-full text-sm font-medium border-2 transition-all"
+            style="border-color: var(--color-warm-brown); color: var(--color-warm-brown);" data-filter="paintings">
+            Paintings </button> <button onclick="filterGallery('crafts')"
+            class="filter-btn px-6 py-2 rounded-full text-sm font-medium border-2 transition-all"
+            style="border-color: var(--color-warm-brown); color: var(--color-warm-brown);" data-filter="crafts">
+            Handmade Crafts </button> <button onclick="filterGallery('decorative')"
+            class="filter-btn px-6 py-2 rounded-full text-sm font-medium border-2 transition-all"
+            style="border-color: var(--color-warm-brown); color: var(--color-warm-brown);" data-filter="decorative">
+            Decorative Items </button> <button onclick="filterGallery('custom')"
+            class="filter-btn px-6 py-2 rounded-full text-sm font-medium border-2 transition-all"
+            style="border-color: var(--color-warm-brown); color: var(--color-warm-brown);" data-filter="custom"> Custom
+            Art </button>
+        </div><!-- Gallery Grid -->
+        <div id="gallery-grid" class="masonry-grid"><!-- Paintings -->
+          <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="paintings"
+            onclick="openLightbox(this)">
+            <div class="relative aspect-square" style="background: linear-gradient(135deg, #FFE4C9 0%, #FFD4A9 100%);">
+              <div class="w-full h-full flex items-center justify-center p-8">
+                <svg class="w-full h-full max-w-32" style="color: #B87333;" viewbox="0 0 100 100" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <rect x="10" y="10" width="80" height="80" rx="4" />
+                  <circle cx="30" cy="35" r="12" />
+                  <path d="M15 75 L35 45 L55 60 L85 30" />
+                </svg>
+              </div>
+              <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4"
+                style="background: rgba(44, 44, 44, 0.85);">
+                <h4 class="text-white font-display text-lg font-semibold">Sunset Horizon</h4>
+                <p class="text-white text-sm opacity-80 mt-1">Oil on Canvas</p><span
+                  class="mt-3 px-4 py-1 rounded-full text-xs"
+                  style="background: var(--color-terracotta); color: white;">Click to View</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="paintings"
+            onclick="openLightbox(this)">
+            <div class="relative aspect-square" style="background: linear-gradient(135deg, #D4E5F7 0%, #B8D4F0 100%);">
+              <div class="w-full h-full flex items-center justify-center p-8">
+                <svg class="w-full h-full max-w-32" style="color: #4A90A4;" viewbox="0 0 100 100" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <path d="M50 10 Q80 30 80 60 Q80 90 50 90 Q20 90 20 60 Q20 30 50 10" />
+                  <path d="M35 50 Q50 70 65 50" />
+                  <circle cx="35" cy="40" r="5" />
+                  <circle cx="65" cy="40" r="5" />
+                </svg>
+              </div>
+              <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4"
+                style="background: rgba(44, 44, 44, 0.85);">
+                <h4 class="text-white font-display text-lg font-semibold">Ocean Dreams</h4>
+                <p class="text-white text-sm opacity-80 mt-1">Watercolor</p><span
+                  class="mt-3 px-4 py-1 rounded-full text-xs"
+                  style="background: var(--color-terracotta); color: white;">Click to View</span>
+              </div>
+            </div>
+          </div><!-- Crafts -->
+          <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="crafts"
+            onclick="openLightbox(this)">
+            <div class="relative aspect-square" style="background: linear-gradient(135deg, #F0E6D8 0%, #E0D4C4 100%);">
+              <div class="w-full h-full flex items-center justify-center p-8">
+                <svg class="w-full h-full max-w-32" style="color: #8B7355;" viewbox="0 0 100 100" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <ellipse cx="50" cy="75" rx="35" ry="15" />
+                  <path d="M25 75 Q25 25 50 15 Q75 25 75 75" />
+                  <path d="M50 15 Q60 5 70 12" />
+                </svg>
+              </div>
+              <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4"
+                style="background: rgba(44, 44, 44, 0.85);">
+                <h4 class="text-white font-display text-lg font-semibold">Ceramic Vase</h4>
+                <p class="text-white text-sm opacity-80 mt-1">Handmade Pottery</p><span
+                  class="mt-3 px-4 py-1 rounded-full text-xs"
+                  style="background: var(--color-terracotta); color: white;">Click to View</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="crafts"
+            onclick="openLightbox(this)">
+            <div class="relative aspect-square" style="background: linear-gradient(135deg, #E8F0E6 0%, #D4E4D0 100%);">
+              <div class="w-full h-full flex items-center justify-center p-8">
+                <svg class="w-full h-full max-w-32" style="color: #6B8E6B;" viewbox="0 0 100 100" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <rect x="25" y="30" width="50" height="50" rx="3" />
+                  <path d="M35 50 L45 60 L65 40" />
+                  <path d="M25 20 L50 10 L75 20" />
+                </svg>
+              </div>
+              <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4"
+                style="background: rgba(44, 44, 44, 0.85);">
+                <h4 class="text-white font-display text-lg font-semibold">Woven Basket</h4>
+                <p class="text-white text-sm opacity-80 mt-1">Natural Fibers</p><span
+                  class="mt-3 px-4 py-1 rounded-full text-xs"
+                  style="background: var(--color-terracotta); color: white;">Click to View</span>
+              </div>
+            </div>
+          </div><!-- Decorative -->
+          <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="decorative"
+            onclick="openLightbox(this)">
+            <div class="relative aspect-square" style="background: linear-gradient(135deg, #F5E6F0 0%, #E8D4E4 100%);">
+              <div class="w-full h-full flex items-center justify-center p-8">
+                <svg class="w-full h-full max-w-32" style="color: #9B6B8B;" viewbox="0 0 100 100" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <circle cx="50" cy="50" r="35" />
+                  <circle cx="50" cy="50" r="25" />
+                  <circle cx="50" cy="50" r="15" />
+                  <path d="M50 15 L50 25 M50 75 L50 85 M15 50 L25 50 M75 50 L85 50" />
+                </svg>
+              </div>
+              <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4"
+                style="background: rgba(44, 44, 44, 0.85);">
+                <h4 class="text-white font-display text-lg font-semibold">Wall Mirror</h4>
+                <p class="text-white text-sm opacity-80 mt-1">Decorative Frame</p><span
+                  class="mt-3 px-4 py-1 rounded-full text-xs"
+                  style="background: var(--color-terracotta); color: white;">Click to View</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="decorative"
+            onclick="openLightbox(this)">
+            <div class="relative aspect-square" style="background: linear-gradient(135deg, #FFF0E6 0%, #FFE4D4 100%);">
+              <div class="w-full h-full flex items-center justify-center p-8">
+                <svg class="w-full h-full max-w-32" style="color: #C4A484;" viewbox="0 0 100 100" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <path d="M50 20 L65 45 L90 50 L70 70 L75 95 L50 80 L25 95 L30 70 L10 50 L35 45 Z" />
+                </svg>
+              </div>
+              <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4"
+                style="background: rgba(44, 44, 44, 0.85);">
+                <h4 class="text-white font-display text-lg font-semibold">Star Lamp</h4>
+                <p class="text-white text-sm opacity-80 mt-1">Ambient Lighting</p><span
+                  class="mt-3 px-4 py-1 rounded-full text-xs"
+                  style="background: var(--color-terracotta); color: white;">Click to View</span>
+              </div>
+            </div>
+          </div><!-- Custom -->
+          <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="custom"
+            onclick="openLightbox(this)">
+            <div class="relative aspect-square" style="background: linear-gradient(135deg, #E6E0F0 0%, #D4CCE8 100%);">
+              <div class="w-full h-full flex items-center justify-center p-8">
+                <svg class="w-full h-full max-w-32" style="color: #7B6B9B;" viewbox="0 0 100 100" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <rect x="15" y="20" width="70" height="60" rx="5" /> <text x="50" y="58" text-anchor="middle"
+                    font-size="20" fill="currentColor" font-family="serif">
+                    ABC
+                  </text>
+                </svg>
+              </div>
+              <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4"
+                style="background: rgba(44, 44, 44, 0.85);">
+                <h4 class="text-white font-display text-lg font-semibold">Name Plaque</h4>
+                <p class="text-white text-sm opacity-80 mt-1">Custom Engraving</p><span
+                  class="mt-3 px-4 py-1 rounded-full text-xs"
+                  style="background: var(--color-terracotta); color: white;">Click to View</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="custom"
+            onclick="openLightbox(this)">
+            <div class="relative aspect-square" style="background: linear-gradient(135deg, #F0F0E6 0%, #E4E4D4 100%);">
+              <div class="w-full h-full flex items-center justify-center p-8">
+                <svg class="w-full h-full max-w-32" style="color: #8B8B6B;" viewbox="0 0 100 100" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <circle cx="50" cy="40" r="25" />
+                  <path d="M30 75 Q50 95 70 75" />
+                  <path d="M40 35 L45 40 M55 35 L60 40" />
+                  <path d="M42 48 Q50 55 58 48" />
+                </svg>
+              </div>
+              <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4"
+                style="background: rgba(44, 44, 44, 0.85);">
+                <h4 class="text-white font-display text-lg font-semibold">Portrait Art</h4>
+                <p class="text-white text-sm opacity-80 mt-1">Custom Commission</p><span
+                  class="mt-3 px-4 py-1 rounded-full text-xs"
+                  style="background: var(--color-terracotta); color: white;">Click to View</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="paintings"
+            onclick="openLightbox(this)">
+            <div class="relative aspect-square" style="background: linear-gradient(135deg, #E6F0E8 0%, #D4E8DC 100%);">
+              <div class="w-full h-full flex items-center justify-center p-8">
+                <svg class="w-full h-full max-w-32" style="color: #5B8B6B;" viewbox="0 0 100 100" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <path d="M50 85 L50 50" />
+                  <path d="M50 50 Q30 40 35 25 Q40 10 50 20 Q60 10 65 25 Q70 40 50 50" />
+                  <path d="M45 55 Q30 60 25 70" />
+                  <path d="M55 55 Q70 60 75 70" />
+                </svg>
+              </div>
+              <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4"
+                style="background: rgba(44, 44, 44, 0.85);">
+                <h4 class="text-white font-display text-lg font-semibold">Botanical Study</h4>
+                <p class="text-white text-sm opacity-80 mt-1">Acrylic Painting</p><span
+                  class="mt-3 px-4 py-1 rounded-full text-xs"
+                  style="background: var(--color-terracotta); color: white;">Click to View</span>
+              </div>
+            </div>
+          </div>
         </div>
-       </div>
       </div>
-      <div class="space-y-8">
-       <div><span class="font-script text-xl" style="color: var(--color-terracotta);">Our Story</span>
-        <h2 class="font-display text-4xl md:text-5xl font-bold mt-2" style="color: var(--color-charcoal);">About Art Theory</h2>
-        <div class="w-24 h-1 mt-6 rounded-full" style="background: linear-gradient(90deg, var(--color-warm-brown), var(--color-terracotta));"></div>
-       </div>
-       <p class="text-lg leading-relaxed" style="color: var(--color-charcoal); opacity: 0.85;">Founded with a passion for authentic craftsmanship, Art Theory began as a small studio where creativity knows no bounds. We believe that art should be accessible, meaningful, and deeply personal.</p>
-       <p class="text-lg leading-relaxed" style="color: var(--color-charcoal); opacity: 0.85;">Every piece we create tells a story – your story. From abstract paintings to intricate handmade crafts, our artists pour their heart and soul into each creation, ensuring that every artwork is as unique as its owner.</p>
-       <div class="grid grid-cols-2 gap-6 pt-4">
-        <div class="text-center p-6 rounded-xl" style="background-color: rgba(196, 164, 132, 0.15);"><span class="font-display text-4xl font-bold" style="color: var(--color-warm-brown);">500+</span>
-         <p class="text-sm mt-2" style="color: var(--color-charcoal);">Artworks Created</p>
+    </section><!-- Services Section -->
+    <section id="services" class="py-20" style="background-color: var(--color-cream);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16"><span class="font-script text-xl" style="color: var(--color-terracotta);">What We
+            Offer</span>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mt-2" style="color: var(--color-charcoal);">Our
+            Services</h2>
+          <div class="w-24 h-1 mx-auto mt-6 rounded-full"
+            style="background: linear-gradient(90deg, var(--color-warm-brown), var(--color-terracotta));"></div>
         </div>
-        <div class="text-center p-6 rounded-xl" style="background-color: rgba(156, 175, 136, 0.15);"><span class="font-display text-4xl font-bold" style="color: var(--color-sage);">200+</span>
-         <p class="text-sm mt-2" style="color: var(--color-charcoal);">Happy Clients</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"><!-- Service 1 -->
+          <div class="service-card p-8 rounded-2xl text-center" style="background-color: white;">
+            <div class="w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6"
+              style="background: linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-warm-brown) 100%);">
+              <svg class="w-10 h-10 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path
+                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--color-charcoal);">Custom Art
+              Creation</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--color-charcoal); opacity: 0.8;">Bring your vision to
+              life with personalized artworks tailored to your taste and space.</p>
+          </div><!-- Service 2 -->
+          <div class="service-card p-8 rounded-2xl text-center" style="background-color: white;">
+            <div class="w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6"
+              style="background: linear-gradient(135deg, var(--color-sage) 0%, #7A9B70 100%);">
+              <svg class="w-10 h-10 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path d="M21 7l-9-4-9 4m18 0l-9 4m9-4v4l-9 4M3 7l9 4M3 7v4l9 4m0-4v9" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--color-charcoal);">Handmade Crafts
+            </h3>
+            <p class="text-sm leading-relaxed" style="color: var(--color-charcoal); opacity: 0.8;">Authentic handcrafted
+              pieces made with traditional techniques and modern aesthetics.</p>
+          </div><!-- Service 3 -->
+          <div class="service-card p-8 rounded-2xl text-center" style="background-color: white;">
+            <div class="w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6"
+              style="background: linear-gradient(135deg, #C9A86C 0%, #A68B4B 100%);">
+              <svg class="w-10 h-10 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path
+                  d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--color-charcoal);">Personalized Gifts
+            </h3>
+            <p class="text-sm leading-relaxed" style="color: var(--color-charcoal); opacity: 0.8;">Create meaningful
+              gifts that leave lasting impressions with custom art pieces.</p>
+          </div><!-- Service 4 -->
+          <div class="service-card p-8 rounded-2xl text-center" style="background-color: white;">
+            <div class="w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6"
+              style="background: linear-gradient(135deg, #8B6B8B 0%, #6B4B6B 100%);">
+              <svg class="w-10 h-10 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.5">
+                <path
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--color-charcoal);">Bulk Orders</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--color-charcoal); opacity: 0.8;">Large-scale
+              decorative artwork orders for businesses, events, and interior projects.</p>
+          </div>
+        </div><!-- Order Process -->
+        <div class="rounded-3xl p-8 md:p-12"
+          style="background: linear-gradient(135deg, rgba(196, 164, 132, 0.1) 0%, rgba(156, 175, 136, 0.1) 100%);">
+          <h3 class="font-display text-2xl md:text-3xl font-bold text-center mb-12"
+            style="color: var(--color-charcoal);">How to Order</h3>
+          <div class="grid md:grid-cols-4 gap-8">
+            <div class="text-center relative">
+              <div
+                class="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-white font-display text-2xl font-bold"
+                style="background: var(--color-warm-brown);">
+                1
+              </div>
+              <h4 class="font-semibold mt-4 mb-2" style="color: var(--color-charcoal);">Contact Us</h4>
+              <p class="text-sm" style="color: var(--color-charcoal); opacity: 0.8;">Reach out via form, phone, or
+                WhatsApp</p>
+              <div class="hidden md:block absolute top-8 left-full w-full h-0.5"
+                style="background: linear-gradient(90deg, var(--color-terracotta), transparent);"></div>
+            </div>
+            <div class="text-center relative">
+              <div
+                class="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-white font-display text-2xl font-bold"
+                style="background: var(--color-terracotta);">
+                2
+              </div>
+              <h4 class="font-semibold mt-4 mb-2" style="color: var(--color-charcoal);">Discuss Requirements</h4>
+              <p class="text-sm" style="color: var(--color-charcoal); opacity: 0.8;">Share your vision and preferences
+              </p>
+              <div class="hidden md:block absolute top-8 left-full w-full h-0.5"
+                style="background: linear-gradient(90deg, var(--color-sage), transparent);"></div>
+            </div>
+            <div class="text-center relative">
+              <div
+                class="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-white font-display text-2xl font-bold"
+                style="background: var(--color-sage);">
+                3
+              </div>
+              <h4 class="font-semibold mt-4 mb-2" style="color: var(--color-charcoal);">Artwork Creation</h4>
+              <p class="text-sm" style="color: var(--color-charcoal); opacity: 0.8;">We craft your unique piece</p>
+              <div class="hidden md:block absolute top-8 left-full w-full h-0.5"
+                style="background: linear-gradient(90deg, var(--color-warm-brown), transparent);"></div>
+            </div>
+            <div class="text-center">
+              <div
+                class="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-white font-display text-2xl font-bold"
+                style="background: var(--color-warm-brown);">
+                4
+              </div>
+              <h4 class="font-semibold mt-4 mb-2" style="color: var(--color-charcoal);">Delivery</h4>
+              <p class="text-sm" style="color: var(--color-charcoal); opacity: 0.8;">Safe delivery to your doorstep</p>
+            </div>
+          </div>
         </div>
-       </div>
-       <div class="pt-4">
-        <h3 class="font-display text-xl font-semibold mb-4" style="color: var(--color-charcoal);">Our Vision</h3>
-        <p class="leading-relaxed" style="color: var(--color-charcoal); opacity: 0.85;">To inspire and transform spaces through authentic, handcrafted artworks that celebrate creativity, culture, and personal expression.</p>
-       </div>
       </div>
-     </div>
-    </div>
-   </section><!-- Gallery Section -->
-   <section id="gallery" class="py-20" style="background: linear-gradient(180deg, #F5F0E8 0%, var(--color-cream) 100%);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-12"><span class="font-script text-xl" style="color: var(--color-terracotta);">Portfolio</span>
-      <h2 class="font-display text-4xl md:text-5xl font-bold mt-2" style="color: var(--color-charcoal);">Our Gallery</h2>
-      <div class="w-24 h-1 mx-auto mt-6 rounded-full" style="background: linear-gradient(90deg, var(--color-warm-brown), var(--color-terracotta));"></div>
-     </div><!-- Filter Buttons -->
-     <div class="flex flex-wrap justify-center gap-3 mb-12"><button onclick="filterGallery('all')" class="filter-btn active px-6 py-2 rounded-full text-sm font-medium transition-all" style="background-color: var(--color-warm-brown); color: white;" data-filter="all"> All </button> <button onclick="filterGallery('paintings')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium border-2 transition-all" style="border-color: var(--color-warm-brown); color: var(--color-warm-brown);" data-filter="paintings"> Paintings </button> <button onclick="filterGallery('crafts')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium border-2 transition-all" style="border-color: var(--color-warm-brown); color: var(--color-warm-brown);" data-filter="crafts"> Handmade Crafts </button> <button onclick="filterGallery('decorative')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium border-2 transition-all" style="border-color: var(--color-warm-brown); color: var(--color-warm-brown);" data-filter="decorative"> Decorative Items </button> <button onclick="filterGallery('custom')" class="filter-btn px-6 py-2 rounded-full text-sm font-medium border-2 transition-all" style="border-color: var(--color-warm-brown); color: var(--color-warm-brown);" data-filter="custom"> Custom Art </button>
-     </div><!-- Gallery Grid -->
-     <div id="gallery-grid" class="masonry-grid"><!-- Paintings -->
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="paintings" onclick="openLightbox(this)">
-       <div class="relative aspect-square" style="background: linear-gradient(135deg, #FFE4C9 0%, #FFD4A9 100%);">
-        <div class="w-full h-full flex items-center justify-center p-8">
-         <svg class="w-full h-full max-w-32" style="color: #B87333;" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="10" y="10" width="80" height="80" rx="4" /> <circle cx="30" cy="35" r="12" /> <path d="M15 75 L35 45 L55 60 L85 30" />
-         </svg>
+    </section><!-- Testimonials Section -->
+    <section class="py-20" style="background: linear-gradient(180deg, #F5F0E8 0%, var(--color-cream) 100%);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16"><span class="font-script text-xl"
+            style="color: var(--color-terracotta);">Testimonials</span>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mt-2" style="color: var(--color-charcoal);">What Our
+            Clients Say</h2>
+          <div class="w-24 h-1 mx-auto mt-6 rounded-full"
+            style="background: linear-gradient(90deg, var(--color-warm-brown), var(--color-terracotta));"></div>
         </div>
-        <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4" style="background: rgba(44, 44, 44, 0.85);">
-         <h4 class="text-white font-display text-lg font-semibold">Sunset Horizon</h4>
-         <p class="text-white text-sm opacity-80 mt-1">Oil on Canvas</p><span class="mt-3 px-4 py-1 rounded-full text-xs" style="background: var(--color-terracotta); color: white;">Click to View</span>
+        <div class="grid md:grid-cols-3 gap-8"><!-- Testimonial 1 -->
+          <div class="testimonial-card p-8 rounded-2xl" style="background-color: white;">
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+            </div>
+            <p class="italic leading-relaxed mb-6" style="color: var(--color-charcoal); opacity: 0.85;">"The custom
+              painting Art Theory created for our living room is absolutely stunning. They perfectly captured our vision
+              and the quality is exceptional!"</p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center font-display font-bold text-white"
+                style="background: var(--color-terracotta);">
+                SA
+              </div>
+              <div class="ml-4">
+                <p class="font-semibold" style="color: var(--color-charcoal);">Sarah Anderson</p>
+                <p class="text-sm" style="color: var(--color-warm-brown);">Interior Designer</p>
+              </div>
+            </div>
+          </div><!-- Testimonial 2 -->
+          <div class="testimonial-card p-8 rounded-2xl" style="background-color: white;">
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+            </div>
+            <p class="italic leading-relaxed mb-6" style="color: var(--color-charcoal); opacity: 0.85;">"I ordered
+              personalized gifts for my entire team and everyone was amazed by the craftsmanship. Will definitely be
+              ordering again!"</p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center font-display font-bold text-white"
+                style="background: var(--color-sage);">
+                MK
+              </div>
+              <div class="ml-4">
+                <p class="font-semibold" style="color: var(--color-charcoal);">Michael Kim</p>
+                <p class="text-sm" style="color: var(--color-warm-brown);">Business Owner</p>
+              </div>
+            </div>
+          </div><!-- Testimonial 3 -->
+          <div class="testimonial-card p-8 rounded-2xl" style="background-color: white;">
+            <div class="flex items-center mb-4">
+              <div class="flex text-yellow-400"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+            </div>
+            <p class="italic leading-relaxed mb-6" style="color: var(--color-charcoal); opacity: 0.85;">"The handmade
+              ceramics I purchased are now the centerpiece of my home. The attention to detail is remarkable. Highly
+              recommended!"</p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center font-display font-bold text-white"
+                style="background: var(--color-warm-brown);">
+                ER
+              </div>
+              <div class="ml-4">
+                <p class="font-semibold" style="color: var(--color-charcoal);">Emma Roberts</p>
+                <p class="text-sm" style="color: var(--color-warm-brown);">Art Collector</p>
+              </div>
+            </div>
+          </div>
         </div>
-       </div>
       </div>
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="paintings" onclick="openLightbox(this)">
-       <div class="relative aspect-square" style="background: linear-gradient(135deg, #D4E5F7 0%, #B8D4F0 100%);">
-        <div class="w-full h-full flex items-center justify-center p-8">
-         <svg class="w-full h-full max-w-32" style="color: #4A90A4;" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M50 10 Q80 30 80 60 Q80 90 50 90 Q20 90 20 60 Q20 30 50 10" /> <path d="M35 50 Q50 70 65 50" /> <circle cx="35" cy="40" r="5" /> <circle cx="65" cy="40" r="5" />
-         </svg>
+    </section><!-- Contact Section -->
+    <section id="contact" class="py-20" style="background-color: var(--color-cream);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16"><span class="font-script text-xl" style="color: var(--color-terracotta);">Get In
+            Touch</span>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mt-2" style="color: var(--color-charcoal);">Contact Us
+          </h2>
+          <div class="w-24 h-1 mx-auto mt-6 rounded-full"
+            style="background: linear-gradient(90deg, var(--color-warm-brown), var(--color-terracotta));"></div>
         </div>
-        <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4" style="background: rgba(44, 44, 44, 0.85);">
-         <h4 class="text-white font-display text-lg font-semibold">Ocean Dreams</h4>
-         <p class="text-white text-sm opacity-80 mt-1">Watercolor</p><span class="mt-3 px-4 py-1 rounded-full text-xs" style="background: var(--color-terracotta); color: white;">Click to View</span>
+        <div class="grid lg:grid-cols-2 gap-12"><!-- Contact Form -->
+          <div class="rounded-2xl p-8 md:p-10" style="background-color: white;">
+            <h3 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-charcoal);">Send us a Message
+            </h3>
+            <form id="contact-form" class="space-y-6">
+              <div><label for="contact-name" class="block text-sm font-medium mb-2"
+                  style="color: var(--color-charcoal);">Your Name *</label> <input type="text" id="contact-name"
+                  name="name" required class="w-full px-4 py-3 rounded-xl border-2 transition-all font-body"
+                  style="border-color: #E8E0D8; background-color: #FAFAFA;" placeholder="John Doe">
+              </div>
+              <div><label for="contact-email" class="block text-sm font-medium mb-2"
+                  style="color: var(--color-charcoal);">Email Address *</label> <input type="email" id="contact-email"
+                  name="email" required class="w-full px-4 py-3 rounded-xl border-2 transition-all font-body"
+                  style="border-color: #E8E0D8; background-color: #FAFAFA;" placeholder="john@example.com">
+              </div>
+              <div><label for="contact-phone" class="block text-sm font-medium mb-2"
+                  style="color: var(--color-charcoal);">Phone Number</label> <input type="tel" id="contact-phone"
+                  name="phone" class="w-full px-4 py-3 rounded-xl border-2 transition-all font-body"
+                  style="border-color: #E8E0D8; background-color: #FAFAFA;" placeholder="+1 (555) 123-4567">
+              </div>
+              <div><label for="contact-message" class="block text-sm font-medium mb-2"
+                  style="color: var(--color-charcoal);">Your Message / Order Details *</label> <textarea
+                  id="contact-message" name="message" rows="5" required
+                  class="w-full px-4 py-3 rounded-xl border-2 transition-all font-body resize-none"
+                  style="border-color: #E8E0D8; background-color: #FAFAFA;"
+                  placeholder="Tell us about your project or inquiry..."></textarea>
+              </div><button type="submit" id="submit-btn"
+                class="btn-primary w-full py-4 rounded-xl text-white font-medium tracking-wide flex items-center justify-center gap-2">
+                <span id="submit-text">Send Message</span>
+                <svg id="submit-spinner" class="w-5 h-5 animate-spin hidden" viewbox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" stroke-opacity="0.25" />
+                  <path d="M12 2a10 10 0 0110 10" stroke-linecap="round" />
+                </svg></button>
+              <p id="form-message" class="text-center text-sm hidden"></p>
+            </form>
+          </div><!-- Contact Info -->
+          <div class="space-y-8">
+            <div class="rounded-2xl p-8"
+              style="background: linear-gradient(135deg, rgba(196, 164, 132, 0.15) 0%, rgba(156, 175, 136, 0.1) 100%);">
+              <h3 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-charcoal);">Contact
+                Information</h3>
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                    style="background: var(--color-terracotta);">
+                    <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2">
+                      <path
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold" style="color: var(--color-charcoal);">Phone</p>
+                    <p id="contact-phone-display" class="mt-1" style="color: var(--color-warm-brown);">+1 (555) 123-4567
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                    style="background: var(--color-sage);">
+                    <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2">
+                      <path
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold" style="color: var(--color-charcoal);">Email</p>
+                    <p id="contact-email-display" class="mt-1" style="color: var(--color-warm-brown);">
+                      hello@arttheory.com</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                    style="background: #25D366;">
+                    <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold" style="color: var(--color-charcoal);">WhatsApp</p>
+                    <p id="contact-whatsapp-display" class="mt-1" style="color: var(--color-warm-brown);">+1 (555)
+                      123-4567</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                    style="background: var(--color-warm-brown);">
+                    <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2">
+                      <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-semibold" style="color: var(--color-charcoal);">Studio Address</p>
+                    <p id="contact-address-display" class="mt-1" style="color: var(--color-warm-brown);">123 Creative
+                      Lane, Art District<br>
+                      New York, NY 10001</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- Social Links -->
+            <div class="rounded-2xl p-8" style="background-color: white;">
+              <h3 class="font-display text-xl font-semibold mb-6" style="color: var(--color-charcoal);">Follow Us</h3>
+              <div class="flex gap-4"><a href="#" target="_blank" rel="noopener noreferrer"
+                  class="w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110"
+                  style="background: linear-gradient(135deg, #833AB4, #E1306C, #F77737);">
+                  <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg></a> <a href="#" target="_blank" rel="noopener noreferrer"
+                  class="w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110"
+                  style="background: #1877F2;">
+                  <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg></a> <a href="#" target="_blank" rel="noopener noreferrer"
+                  class="w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110"
+                  style="background: #E60023;">
+                  <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
+                  </svg></a>
+              </div>
+            </div><!-- Map Placeholder -->
+            <div class="rounded-2xl overflow-hidden h-64"
+              style="background: linear-gradient(135deg, #E8E4E0 0%, #D4D0CC 100%);">
+              <div class="w-full h-full flex items-center justify-center">
+                <div class="text-center">
+                  <svg class="w-16 h-16 mx-auto mb-4" style="color: var(--color-warm-brown);" viewbox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <p class="font-medium" style="color: var(--color-charcoal);">Visit Our Studio</p>
+                  <p class="text-sm mt-1" style="color: var(--color-warm-brown);">Art District, New York</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-       </div>
-      </div><!-- Crafts -->
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="crafts" onclick="openLightbox(this)">
-       <div class="relative aspect-square" style="background: linear-gradient(135deg, #F0E6D8 0%, #E0D4C4 100%);">
-        <div class="w-full h-full flex items-center justify-center p-8">
-         <svg class="w-full h-full max-w-32" style="color: #8B7355;" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="50" cy="75" rx="35" ry="15" /> <path d="M25 75 Q25 25 50 15 Q75 25 75 75" /> <path d="M50 15 Q60 5 70 12" />
-         </svg>
-        </div>
-        <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4" style="background: rgba(44, 44, 44, 0.85);">
-         <h4 class="text-white font-display text-lg font-semibold">Ceramic Vase</h4>
-         <p class="text-white text-sm opacity-80 mt-1">Handmade Pottery</p><span class="mt-3 px-4 py-1 rounded-full text-xs" style="background: var(--color-terracotta); color: white;">Click to View</span>
-        </div>
-       </div>
       </div>
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="crafts" onclick="openLightbox(this)">
-       <div class="relative aspect-square" style="background: linear-gradient(135deg, #E8F0E6 0%, #D4E4D0 100%);">
-        <div class="w-full h-full flex items-center justify-center p-8">
-         <svg class="w-full h-full max-w-32" style="color: #6B8E6B;" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="25" y="30" width="50" height="50" rx="3" /> <path d="M35 50 L45 60 L65 40" /> <path d="M25 20 L50 10 L75 20" />
-         </svg>
-        </div>
-        <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4" style="background: rgba(44, 44, 44, 0.85);">
-         <h4 class="text-white font-display text-lg font-semibold">Woven Basket</h4>
-         <p class="text-white text-sm opacity-80 mt-1">Natural Fibers</p><span class="mt-3 px-4 py-1 rounded-full text-xs" style="background: var(--color-terracotta); color: white;">Click to View</span>
-        </div>
-       </div>
-      </div><!-- Decorative -->
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="decorative" onclick="openLightbox(this)">
-       <div class="relative aspect-square" style="background: linear-gradient(135deg, #F5E6F0 0%, #E8D4E4 100%);">
-        <div class="w-full h-full flex items-center justify-center p-8">
-         <svg class="w-full h-full max-w-32" style="color: #9B6B8B;" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="50" cy="50" r="35" /> <circle cx="50" cy="50" r="25" /> <circle cx="50" cy="50" r="15" /> <path d="M50 15 L50 25 M50 75 L50 85 M15 50 L25 50 M75 50 L85 50" />
-         </svg>
-        </div>
-        <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4" style="background: rgba(44, 44, 44, 0.85);">
-         <h4 class="text-white font-display text-lg font-semibold">Wall Mirror</h4>
-         <p class="text-white text-sm opacity-80 mt-1">Decorative Frame</p><span class="mt-3 px-4 py-1 rounded-full text-xs" style="background: var(--color-terracotta); color: white;">Click to View</span>
-        </div>
-       </div>
-      </div>
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="decorative" onclick="openLightbox(this)">
-       <div class="relative aspect-square" style="background: linear-gradient(135deg, #FFF0E6 0%, #FFE4D4 100%);">
-        <div class="w-full h-full flex items-center justify-center p-8">
-         <svg class="w-full h-full max-w-32" style="color: #C4A484;" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M50 20 L65 45 L90 50 L70 70 L75 95 L50 80 L25 95 L30 70 L10 50 L35 45 Z" />
-         </svg>
-        </div>
-        <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4" style="background: rgba(44, 44, 44, 0.85);">
-         <h4 class="text-white font-display text-lg font-semibold">Star Lamp</h4>
-         <p class="text-white text-sm opacity-80 mt-1">Ambient Lighting</p><span class="mt-3 px-4 py-1 rounded-full text-xs" style="background: var(--color-terracotta); color: white;">Click to View</span>
-        </div>
-       </div>
-      </div><!-- Custom -->
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="custom" onclick="openLightbox(this)">
-       <div class="relative aspect-square" style="background: linear-gradient(135deg, #E6E0F0 0%, #D4CCE8 100%);">
-        <div class="w-full h-full flex items-center justify-center p-8">
-         <svg class="w-full h-full max-w-32" style="color: #7B6B9B;" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="15" y="20" width="70" height="60" rx="5" /> <text x="50" y="58" text-anchor="middle" font-size="20" fill="currentColor" font-family="serif">
-           ABC
-          </text>
-         </svg>
-        </div>
-        <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4" style="background: rgba(44, 44, 44, 0.85);">
-         <h4 class="text-white font-display text-lg font-semibold">Name Plaque</h4>
-         <p class="text-white text-sm opacity-80 mt-1">Custom Engraving</p><span class="mt-3 px-4 py-1 rounded-full text-xs" style="background: var(--color-terracotta); color: white;">Click to View</span>
-        </div>
-       </div>
-      </div>
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="custom" onclick="openLightbox(this)">
-       <div class="relative aspect-square" style="background: linear-gradient(135deg, #F0F0E6 0%, #E4E4D4 100%);">
-        <div class="w-full h-full flex items-center justify-center p-8">
-         <svg class="w-full h-full max-w-32" style="color: #8B8B6B;" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="50" cy="40" r="25" /> <path d="M30 75 Q50 95 70 75" /> <path d="M40 35 L45 40 M55 35 L60 40" /> <path d="M42 48 Q50 55 58 48" />
-         </svg>
-        </div>
-        <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4" style="background: rgba(44, 44, 44, 0.85);">
-         <h4 class="text-white font-display text-lg font-semibold">Portrait Art</h4>
-         <p class="text-white text-sm opacity-80 mt-1">Custom Commission</p><span class="mt-3 px-4 py-1 rounded-full text-xs" style="background: var(--color-terracotta); color: white;">Click to View</span>
-        </div>
-       </div>
-      </div>
-      <div class="gallery-item rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-category="paintings" onclick="openLightbox(this)">
-       <div class="relative aspect-square" style="background: linear-gradient(135deg, #E6F0E8 0%, #D4E8DC 100%);">
-        <div class="w-full h-full flex items-center justify-center p-8">
-         <svg class="w-full h-full max-w-32" style="color: #5B8B6B;" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M50 85 L50 50" /> <path d="M50 50 Q30 40 35 25 Q40 10 50 20 Q60 10 65 25 Q70 40 50 50" /> <path d="M45 55 Q30 60 25 70" /> <path d="M55 55 Q70 60 75 70" />
-         </svg>
-        </div>
-        <div class="gallery-overlay absolute inset-0 flex flex-col items-center justify-center opacity-0 p-4" style="background: rgba(44, 44, 44, 0.85);">
-         <h4 class="text-white font-display text-lg font-semibold">Botanical Study</h4>
-         <p class="text-white text-sm opacity-80 mt-1">Acrylic Painting</p><span class="mt-3 px-4 py-1 rounded-full text-xs" style="background: var(--color-terracotta); color: white;">Click to View</span>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- Services Section -->
-   <section id="services" class="py-20" style="background-color: var(--color-cream);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-16"><span class="font-script text-xl" style="color: var(--color-terracotta);">What We Offer</span>
-      <h2 class="font-display text-4xl md:text-5xl font-bold mt-2" style="color: var(--color-charcoal);">Our Services</h2>
-      <div class="w-24 h-1 mx-auto mt-6 rounded-full" style="background: linear-gradient(90deg, var(--color-warm-brown), var(--color-terracotta));"></div>
-     </div>
-     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"><!-- Service 1 -->
-      <div class="service-card p-8 rounded-2xl text-center" style="background-color: white;">
-       <div class="w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6" style="background: linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-warm-brown) 100%);">
-        <svg class="w-10 h-10 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-       </div>
-       <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--color-charcoal);">Custom Art Creation</h3>
-       <p class="text-sm leading-relaxed" style="color: var(--color-charcoal); opacity: 0.8;">Bring your vision to life with personalized artworks tailored to your taste and space.</p>
-      </div><!-- Service 2 -->
-      <div class="service-card p-8 rounded-2xl text-center" style="background-color: white;">
-       <div class="w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6" style="background: linear-gradient(135deg, var(--color-sage) 0%, #7A9B70 100%);">
-        <svg class="w-10 h-10 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 7l-9-4-9 4m18 0l-9 4m9-4v4l-9 4M3 7l9 4M3 7v4l9 4m0-4v9" />
-        </svg>
-       </div>
-       <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--color-charcoal);">Handmade Crafts</h3>
-       <p class="text-sm leading-relaxed" style="color: var(--color-charcoal); opacity: 0.8;">Authentic handcrafted pieces made with traditional techniques and modern aesthetics.</p>
-      </div><!-- Service 3 -->
-      <div class="service-card p-8 rounded-2xl text-center" style="background-color: white;">
-       <div class="w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #C9A86C 0%, #A68B4B 100%);">
-        <svg class="w-10 h-10 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-        </svg>
-       </div>
-       <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--color-charcoal);">Personalized Gifts</h3>
-       <p class="text-sm leading-relaxed" style="color: var(--color-charcoal); opacity: 0.8;">Create meaningful gifts that leave lasting impressions with custom art pieces.</p>
-      </div><!-- Service 4 -->
-      <div class="service-card p-8 rounded-2xl text-center" style="background-color: white;">
-       <div class="w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #8B6B8B 0%, #6B4B6B 100%);">
-        <svg class="w-10 h-10 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-        </svg>
-       </div>
-       <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--color-charcoal);">Bulk Orders</h3>
-       <p class="text-sm leading-relaxed" style="color: var(--color-charcoal); opacity: 0.8;">Large-scale decorative artwork orders for businesses, events, and interior projects.</p>
-      </div>
-     </div><!-- Order Process -->
-     <div class="rounded-3xl p-8 md:p-12" style="background: linear-gradient(135deg, rgba(196, 164, 132, 0.1) 0%, rgba(156, 175, 136, 0.1) 100%);">
-      <h3 class="font-display text-2xl md:text-3xl font-bold text-center mb-12" style="color: var(--color-charcoal);">How to Order</h3>
-      <div class="grid md:grid-cols-4 gap-8">
-       <div class="text-center relative">
-        <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-white font-display text-2xl font-bold" style="background: var(--color-warm-brown);">
-         1
-        </div>
-        <h4 class="font-semibold mt-4 mb-2" style="color: var(--color-charcoal);">Contact Us</h4>
-        <p class="text-sm" style="color: var(--color-charcoal); opacity: 0.8;">Reach out via form, phone, or WhatsApp</p>
-        <div class="hidden md:block absolute top-8 left-full w-full h-0.5" style="background: linear-gradient(90deg, var(--color-terracotta), transparent);"></div>
-       </div>
-       <div class="text-center relative">
-        <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-white font-display text-2xl font-bold" style="background: var(--color-terracotta);">
-         2
-        </div>
-        <h4 class="font-semibold mt-4 mb-2" style="color: var(--color-charcoal);">Discuss Requirements</h4>
-        <p class="text-sm" style="color: var(--color-charcoal); opacity: 0.8;">Share your vision and preferences</p>
-        <div class="hidden md:block absolute top-8 left-full w-full h-0.5" style="background: linear-gradient(90deg, var(--color-sage), transparent);"></div>
-       </div>
-       <div class="text-center relative">
-        <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-white font-display text-2xl font-bold" style="background: var(--color-sage);">
-         3
-        </div>
-        <h4 class="font-semibold mt-4 mb-2" style="color: var(--color-charcoal);">Artwork Creation</h4>
-        <p class="text-sm" style="color: var(--color-charcoal); opacity: 0.8;">We craft your unique piece</p>
-        <div class="hidden md:block absolute top-8 left-full w-full h-0.5" style="background: linear-gradient(90deg, var(--color-warm-brown), transparent);"></div>
-       </div>
-       <div class="text-center">
-        <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-white font-display text-2xl font-bold" style="background: var(--color-warm-brown);">
-         4
-        </div>
-        <h4 class="font-semibold mt-4 mb-2" style="color: var(--color-charcoal);">Delivery</h4>
-        <p class="text-sm" style="color: var(--color-charcoal); opacity: 0.8;">Safe delivery to your doorstep</p>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- Testimonials Section -->
-   <section class="py-20" style="background: linear-gradient(180deg, #F5F0E8 0%, var(--color-cream) 100%);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-16"><span class="font-script text-xl" style="color: var(--color-terracotta);">Testimonials</span>
-      <h2 class="font-display text-4xl md:text-5xl font-bold mt-2" style="color: var(--color-charcoal);">What Our Clients Say</h2>
-      <div class="w-24 h-1 mx-auto mt-6 rounded-full" style="background: linear-gradient(90deg, var(--color-warm-brown), var(--color-terracotta));"></div>
-     </div>
-     <div class="grid md:grid-cols-3 gap-8"><!-- Testimonial 1 -->
-      <div class="testimonial-card p-8 rounded-2xl" style="background-color: white;">
-       <div class="flex items-center mb-4">
-        <div class="flex text-yellow-400"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-        </div>
-       </div>
-       <p class="italic leading-relaxed mb-6" style="color: var(--color-charcoal); opacity: 0.85;">"The custom painting Art Theory created for our living room is absolutely stunning. They perfectly captured our vision and the quality is exceptional!"</p>
-       <div class="flex items-center">
-        <div class="w-12 h-12 rounded-full flex items-center justify-center font-display font-bold text-white" style="background: var(--color-terracotta);">
-         SA
-        </div>
-        <div class="ml-4">
-         <p class="font-semibold" style="color: var(--color-charcoal);">Sarah Anderson</p>
-         <p class="text-sm" style="color: var(--color-warm-brown);">Interior Designer</p>
-        </div>
-       </div>
-      </div><!-- Testimonial 2 -->
-      <div class="testimonial-card p-8 rounded-2xl" style="background-color: white;">
-       <div class="flex items-center mb-4">
-        <div class="flex text-yellow-400"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-        </div>
-       </div>
-       <p class="italic leading-relaxed mb-6" style="color: var(--color-charcoal); opacity: 0.85;">"I ordered personalized gifts for my entire team and everyone was amazed by the craftsmanship. Will definitely be ordering again!"</p>
-       <div class="flex items-center">
-        <div class="w-12 h-12 rounded-full flex items-center justify-center font-display font-bold text-white" style="background: var(--color-sage);">
-         MK
-        </div>
-        <div class="ml-4">
-         <p class="font-semibold" style="color: var(--color-charcoal);">Michael Kim</p>
-         <p class="text-sm" style="color: var(--color-warm-brown);">Business Owner</p>
-        </div>
-       </div>
-      </div><!-- Testimonial 3 -->
-      <div class="testimonial-card p-8 rounded-2xl" style="background-color: white;">
-       <div class="flex items-center mb-4">
-        <div class="flex text-yellow-400"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-        </div>
-       </div>
-       <p class="italic leading-relaxed mb-6" style="color: var(--color-charcoal); opacity: 0.85;">"The handmade ceramics I purchased are now the centerpiece of my home. The attention to detail is remarkable. Highly recommended!"</p>
-       <div class="flex items-center">
-        <div class="w-12 h-12 rounded-full flex items-center justify-center font-display font-bold text-white" style="background: var(--color-warm-brown);">
-         ER
-        </div>
-        <div class="ml-4">
-         <p class="font-semibold" style="color: var(--color-charcoal);">Emma Roberts</p>
-         <p class="text-sm" style="color: var(--color-warm-brown);">Art Collector</p>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section><!-- Contact Section -->
-   <section id="contact" class="py-20" style="background-color: var(--color-cream);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-16"><span class="font-script text-xl" style="color: var(--color-terracotta);">Get In Touch</span>
-      <h2 class="font-display text-4xl md:text-5xl font-bold mt-2" style="color: var(--color-charcoal);">Contact Us</h2>
-      <div class="w-24 h-1 mx-auto mt-6 rounded-full" style="background: linear-gradient(90deg, var(--color-warm-brown), var(--color-terracotta));"></div>
-     </div>
-     <div class="grid lg:grid-cols-2 gap-12"><!-- Contact Form -->
-      <div class="rounded-2xl p-8 md:p-10" style="background-color: white;">
-       <h3 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-charcoal);">Send us a Message</h3>
-       <form id="contact-form" class="space-y-6">
-        <div><label for="contact-name" class="block text-sm font-medium mb-2" style="color: var(--color-charcoal);">Your Name *</label> <input type="text" id="contact-name" name="name" required class="w-full px-4 py-3 rounded-xl border-2 transition-all font-body" style="border-color: #E8E0D8; background-color: #FAFAFA;" placeholder="John Doe">
-        </div>
-        <div><label for="contact-email" class="block text-sm font-medium mb-2" style="color: var(--color-charcoal);">Email Address *</label> <input type="email" id="contact-email" name="email" required class="w-full px-4 py-3 rounded-xl border-2 transition-all font-body" style="border-color: #E8E0D8; background-color: #FAFAFA;" placeholder="john@example.com">
-        </div>
-        <div><label for="contact-phone" class="block text-sm font-medium mb-2" style="color: var(--color-charcoal);">Phone Number</label> <input type="tel" id="contact-phone" name="phone" class="w-full px-4 py-3 rounded-xl border-2 transition-all font-body" style="border-color: #E8E0D8; background-color: #FAFAFA;" placeholder="+1 (555) 123-4567">
-        </div>
-        <div><label for="contact-message" class="block text-sm font-medium mb-2" style="color: var(--color-charcoal);">Your Message / Order Details *</label> <textarea id="contact-message" name="message" rows="5" required class="w-full px-4 py-3 rounded-xl border-2 transition-all font-body resize-none" style="border-color: #E8E0D8; background-color: #FAFAFA;" placeholder="Tell us about your project or inquiry..."></textarea>
-        </div><button type="submit" id="submit-btn" class="btn-primary w-full py-4 rounded-xl text-white font-medium tracking-wide flex items-center justify-center gap-2"> <span id="submit-text">Send Message</span>
-         <svg id="submit-spinner" class="w-5 h-5 animate-spin hidden" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-opacity="0.25" /> <path d="M12 2a10 10 0 0110 10" stroke-linecap="round" />
-         </svg></button>
-        <p id="form-message" class="text-center text-sm hidden"></p>
-       </form>
-      </div><!-- Contact Info -->
-      <div class="space-y-8">
-       <div class="rounded-2xl p-8" style="background: linear-gradient(135deg, rgba(196, 164, 132, 0.15) 0%, rgba(156, 175, 136, 0.1) 100%);">
-        <h3 class="font-display text-2xl font-semibold mb-6" style="color: var(--color-charcoal);">Contact Information</h3>
-        <div class="space-y-6">
-         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background: var(--color-terracotta);">
-           <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-           </svg>
+    </section><!-- Footer -->
+    <footer class="py-12" style="background: var(--color-charcoal);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-2 mb-4">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center"
+                style="background: linear-gradient(135deg, var(--color-warm-brown), var(--color-terracotta));">
+                <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div><span id="footer-brand" class="font-display text-xl font-semibold text-white">Art Theory</span>
+            </div>
+            <p class="text-gray-400 leading-relaxed max-w-md">Where creativity meets expression. Handcrafted artworks
+              that tell stories, evoke emotions, and transform spaces.</p>
           </div>
           <div>
-           <p class="font-semibold" style="color: var(--color-charcoal);">Phone</p>
-           <p id="contact-phone-display" class="mt-1" style="color: var(--color-warm-brown);">+1 (555) 123-4567</p>
-          </div>
-         </div>
-         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background: var(--color-sage);">
-           <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-           </svg>
-          </div>
-          <div>
-           <p class="font-semibold" style="color: var(--color-charcoal);">Email</p>
-           <p id="contact-email-display" class="mt-1" style="color: var(--color-warm-brown);">hello@arttheory.com</p>
-          </div>
-         </div>
-         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background: #25D366;">
-           <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-           </svg>
+            <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+              <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+              <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+              <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+            </ul>
           </div>
           <div>
-           <p class="font-semibold" style="color: var(--color-charcoal);">WhatsApp</p>
-           <p id="contact-whatsapp-display" class="mt-1" style="color: var(--color-warm-brown);">+1 (555) 123-4567</p>
+            <h4 class="font-semibold text-white mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li><span class="text-gray-400">Custom Art</span></li>
+              <li><span class="text-gray-400">Handmade Crafts</span></li>
+              <li><span class="text-gray-400">Personalized Gifts</span></li>
+              <li><span class="text-gray-400">Bulk Orders</span></li>
+            </ul>
           </div>
-         </div>
-         <div class="flex items-start gap-4">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background: var(--color-warm-brown);">
-           <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-           </svg>
+        </div>
+        <div class="section-divider mb-8"></div>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-gray-500 text-sm">© 2024 Art Theory. All rights reserved.</p>
+          <p class="text-gray-500 text-sm">Crafted with ❤️ for art lovers</p>
+        </div>
+      </div>
+    </footer><!-- WhatsApp Button --> <a id="whatsapp-btn" href="https://wa.me/15551234567" target="_blank"
+      rel="noopener noreferrer" class="whatsapp-btn">
+      <svg class="w-8 h-8 text-white" viewbox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg></a> <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+      <div class="lightbox-content"><button onclick="closeLightbox(event)"
+          class="absolute -top-12 right-0 text-white p-2 hover:opacity-80">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg></button>
+        <div id="lightbox-image" class="rounded-2xl overflow-hidden max-w-2xl" style="background: white;">
+          <div class="aspect-square flex items-center justify-center p-12"
+            style="background: linear-gradient(135deg, #F8E8D6 0%, #E8D6C6 100%);">
+            <svg class="w-48 h-48" style="color: var(--color-warm-brown);" viewbox="0 0 100 100" fill="none"
+              stroke="currentColor" stroke-width="1">
+              <rect x="10" y="10" width="80" height="80" rx="4" />
+            </svg>
           </div>
-          <div>
-           <p class="font-semibold" style="color: var(--color-charcoal);">Studio Address</p>
-           <p id="contact-address-display" class="mt-1" style="color: var(--color-warm-brown);">123 Creative Lane, Art District<br>
-            New York, NY 10001</p>
+          <div class="p-6 text-center">
+            <h3 id="lightbox-title" class="font-display text-2xl font-semibold" style="color: var(--color-charcoal);">
+              Artwork Title</h3>
+            <p id="lightbox-category" class="mt-2" style="color: var(--color-warm-brown);">Category</p><a
+              href="#contact" onclick="closeLightbox(event)"
+              class="btn-primary inline-block mt-4 px-6 py-2 rounded-full text-white text-sm"> Inquire About This Piece
+            </a>
           </div>
-         </div>
         </div>
-       </div><!-- Social Links -->
-       <div class="rounded-2xl p-8" style="background-color: white;">
-        <h3 class="font-display text-xl font-semibold mb-6" style="color: var(--color-charcoal);">Follow Us</h3>
-        <div class="flex gap-4"><a href="#" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110" style="background: linear-gradient(135deg, #833AB4, #E1306C, #F77737);">
-          <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-          </svg></a> <a href="#" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110" style="background: #1877F2;">
-          <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-          </svg></a> <a href="#" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110" style="background: #E60023;">
-          <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
-          </svg></a>
-        </div>
-       </div><!-- Map Placeholder -->
-       <div class="rounded-2xl overflow-hidden h-64" style="background: linear-gradient(135deg, #E8E4E0 0%, #D4D0CC 100%);">
-        <div class="w-full h-full flex items-center justify-center">
-         <div class="text-center">
-          <svg class="w-16 h-16 mx-auto mb-4" style="color: var(--color-warm-brown);" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          <p class="font-medium" style="color: var(--color-charcoal);">Visit Our Studio</p>
-          <p class="text-sm mt-1" style="color: var(--color-warm-brown);">Art District, New York</p>
-         </div>
-        </div>
-       </div>
       </div>
-     </div>
+    </div><!-- Toast Notification -->
+    <div id="toast" class="toast"><span id="toast-message">Message sent successfully!</span>
     </div>
-   </section><!-- Footer -->
-   <footer class="py-12" style="background: var(--color-charcoal);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="grid md:grid-cols-4 gap-8 mb-12">
-      <div class="md:col-span-2">
-       <div class="flex items-center space-x-2 mb-4">
-        <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, var(--color-warm-brown), var(--color-terracotta));">
-         <svg class="w-5 h-5 text-white" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-         </svg>
-        </div><span id="footer-brand" class="font-display text-xl font-semibold text-white">Art Theory</span>
-       </div>
-       <p class="text-gray-400 leading-relaxed max-w-md">Where creativity meets expression. Handcrafted artworks that tell stories, evoke emotions, and transform spaces.</p>
-      </div>
-      <div>
-       <h4 class="font-semibold text-white mb-4">Quick Links</h4>
-       <ul class="space-y-2">
-        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-        <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
-        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
-        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-       </ul>
-      </div>
-      <div>
-       <h4 class="font-semibold text-white mb-4">Services</h4>
-       <ul class="space-y-2">
-        <li><span class="text-gray-400">Custom Art</span></li>
-        <li><span class="text-gray-400">Handmade Crafts</span></li>
-        <li><span class="text-gray-400">Personalized Gifts</span></li>
-        <li><span class="text-gray-400">Bulk Orders</span></li>
-       </ul>
-      </div>
-     </div>
-     <div class="section-divider mb-8"></div>
-     <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-gray-500 text-sm">© 2024 Art Theory. All rights reserved.</p>
-      <p class="text-gray-500 text-sm">Crafted with ❤️ for art lovers</p>
-     </div>
-    </div>
-   </footer><!-- WhatsApp Button --> <a id="whatsapp-btn" href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
-    <svg class="w-8 h-8 text-white" viewbox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-    </svg></a> <!-- Lightbox -->
-   <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
-    <div class="lightbox-content"><button onclick="closeLightbox(event)" class="absolute -top-12 right-0 text-white p-2 hover:opacity-80">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg></button>
-     <div id="lightbox-image" class="rounded-2xl overflow-hidden max-w-2xl" style="background: white;">
-      <div class="aspect-square flex items-center justify-center p-12" style="background: linear-gradient(135deg, #F8E8D6 0%, #E8D6C6 100%);">
-       <svg class="w-48 h-48" style="color: var(--color-warm-brown);" viewbox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1"><rect x="10" y="10" width="80" height="80" rx="4" />
-       </svg>
-      </div>
-      <div class="p-6 text-center">
-       <h3 id="lightbox-title" class="font-display text-2xl font-semibold" style="color: var(--color-charcoal);">Artwork Title</h3>
-       <p id="lightbox-category" class="mt-2" style="color: var(--color-warm-brown);">Category</p><a href="#contact" onclick="closeLightbox(event)" class="btn-primary inline-block mt-4 px-6 py-2 rounded-full text-white text-sm"> Inquire About This Piece </a>
-      </div>
-     </div>
-    </div>
-   </div><!-- Toast Notification -->
-   <div id="toast" class="toast"><span id="toast-message">Message sent successfully!</span>
-   </div>
   </div>
   <script src="index.js"> </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cb99675c157795d',t:'MTc3MDcwNTM0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9cb99675c157795d',t:'MTc3MDcwNTM0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
 </html>
