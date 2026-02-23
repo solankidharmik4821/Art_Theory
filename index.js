@@ -188,7 +188,7 @@
       const title = element.querySelector('h4').textContent;
       const category = element.querySelector('.gallery-overlay p').textContent;
       const bgStyle = element.querySelector('.aspect-square').style.background;
-      const svg = element.querySelector('svg').outerHTML;
+      const svg = element.querySelector('img').outerHTML;
       
       document.getElementById('lightbox-title').textContent = title;
       document.getElementById('lightbox-category').textContent = category;
